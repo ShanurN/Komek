@@ -1,0 +1,814 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000 url('../images/background-poster.png') no-repeat center top fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Hero Banner */
+.hero-banner {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0px auto;
+    height: 380px;
+    background: url('../images/Group 850.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-date {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* Header */
+.header {
+    background: #1b3a45;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    max-width: 1240px;
+    margin: 0px auto;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.logo-text {
+    color: #4ade80;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-subtext {
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.header-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40px; /* Space from logo */
+    padding-right: 0;
+    color: white;
+}
+
+.location,
+.phone {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    text-align: left;
+    min-width: 140px; /* Ensure they take up some space for layout stability */
+}
+
+.location strong,
+.phone strong {
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.location span,
+.phone span {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.phone strong::after {
+    content: ' ⌄';
+    font-size: 0.8rem;
+    vertical-align: middle;
+    opacity: 0.7;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #a0aeb7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a3c48;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.social-icon:hover {
+    background: #fff;
+}
+
+.btn-ticket {
+    background: #ef4444;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-ticket:hover {
+    background: #dc2626;
+}
+
+/* Navigation */
+.nav {
+    background: white;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1240px;
+    margin: 0px auto;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-item {
+    padding: 15px 0;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ef4444;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-login {
+    background: white;
+    color: #ef4444;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: 2px solid #ef4444;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-login:hover {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-review {
+    background: transparent;
+    color: #ef4444;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: 2px solid #ef4444;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-review:hover {
+    background: #ef4444;
+    color: white;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+    background: #f5f5f5;
+    padding: 20px 0;
+    max-width: 1240px;
+    margin: 0px auto;
+}
+
+.tabs-container {
+    max-width: 1240px;
+    margin: 0px auto;
+    padding: 0 50px;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.tab {
+    background: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.tab.active {
+    background: #ef4444;
+    color: white;
+}
+
+.tab:hover {
+    background: #fee;
+}
+
+.tab.active:hover {
+    background: #dc2626;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1240px;
+    margin: 0px auto;
+    padding: 50px;
+    background: white;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.movie-card {
+    background: transparent;
+    box-shadow: none;
+    transition: none;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.movie-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.movie-poster {
+    width: 100%;
+    height: 380px; /* Adjusted height to match proportions */
+    background: #eee;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ef4444;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.age-rating {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: #1f2937; /* Dark styling */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.favorite-icon {
+    display: none; /* Icon not present in the new design screenshot for card view? Or hidden. User said 'exactly like photo'. Photo doesn't show hearts on posters clearly or they are very subtle. I will hide for now or keep top right? Screenshot doesn't show them. */
+}
+
+.movie-info {
+    padding: 15px 0 0 0;
+}
+
+.movie-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.movie-genre {
+    display: inline-block;
+    background: #f3f4f6;
+    color: #6b7280;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+
+.movie-showtimes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.showtime-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.showtime-btn {
+    background: white;
+    padding: 0;
+    border-radius: 5px;
+    border: 1px solid #ef4444;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 60px;
+}
+
+.showtime-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.showtime-time {
+    background: #ef4444;
+    color: white;
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.showtime-meta {
+    background: white;
+    color: #374151;
+    padding: 3px 5px;
+    font-size: 0.7rem;
+    text-align: center;
+    border-top: none;
+}
+
+.showtime-hall {
+    font-size: 0.7rem;
+    color: #6b7280;
+    margin-top: 4px;
+    text-align: center;
+}
+
+/* Footer */
+/* Footer */
+.footer {
+    background: transparent;
+    color: white;
+    padding: 0;
+    max-width: 1240px;
+    margin: 0px auto 0;
+}
+
+.footer-container {
+    padding: 0;
+}
+
+/* Footer Top */
+.footer-top {
+    background: #123D4B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px 40px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-contact-info {
+    display: flex;
+    gap: 60px;
+    text-align: left;
+}
+
+.contact-item p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.contact-item .sub-text {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.contact-item .highlight {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Footer Middle */
+.footer-middle {
+    background: #0C3542;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.footer-menu-col {
+    flex: 1; /* Takes up remaining space to push payment col to the right */
+}
+
+.footer-payment-col {
+    /* No flex: 1, so it takes only needed width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the left */
+    text-align: left;        /* Aligns text to the left */
+}
+
+.footer-menu-col h3, .footer-payment-col h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+/* Custom Mastercard Logo CSS */
+.mc-logo {
+    display: flex;
+    position: relative;
+    width: 44px;
+    height: 28px;
+}
+
+.mc-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+}
+
+.mc-red {
+    background: #EB001B;
+    left: 0;
+    z-index: 1;
+}
+
+.mc-orange {
+    background: #FF5F00;
+    right: 0;
+    z-index: 2;
+    mix-blend-mode: hard-light; /* Attempt to simulate overlapping */
+    opacity: 0.9;
+}
+
+/* Simple Visa Logo Text Style */
+.visa-logo {
+    color: #1a75e8; /* Visa Blue */
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.8rem;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.disclaimer {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    max-width: 400px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background: #0C3542;
+    padding: 20px 50px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #6c7e86; /* Greyish background from image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.social-btn img {
+    width: 18px;
+    height: auto;
+}
+
+.social-btn:hover {
+    background: #8fa0a8;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .movies-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .header-container, .nav-container, .tabs-container, .main-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hide Header on Mobile */
+    .header {
+        display: none;
+    }
+
+    /* Navigation */
+
+    .header-info {
+        width: 100%;
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .location, .phone {
+        min-width: unset;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin: 5px 0;
+    }
+
+    /* Navigation */
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: space-between; /* or center */
+        gap: 10px;
+        overflow-x: auto; /* Allow scroll if too many items */
+        padding-bottom: 5px;
+    }
+    
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Hero */
+    .hero-banner {
+        height: 300px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 30px 20px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer */
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .footer-contact-info {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .footer-middle {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .footer-payment-col {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header mobile adjustments */
+    .header-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .location, .phone {
+        min-width: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    /* Nav mobile adjustments */
+    .nav-menu {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    
+    .nav-item .nav-link {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-login, .btn-review {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Grid */
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-poster {
+        height: auto;
+        aspect-ratio: 2/3;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+}
