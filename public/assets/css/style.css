@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #000 url('../images/background-poster.png') no-repeat center top fixed;
+    background: #000 url('../images/фон 1.png') no-repeat center top fixed;
     background-size: cover;
     color: #333;
 }
@@ -106,7 +106,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 40px; /* Space from logo */
+    margin-left: 40px; 
     padding-right: 0;
     color: white;
 }
@@ -118,7 +118,7 @@ body {
     font-size: 0.9rem;
     line-height: 1.3;
     text-align: left;
-    min-width: 140px; /* Ensure they take up some space for layout stability */
+    min-width: 140px; 
 }
 
 .location strong,
@@ -323,7 +323,7 @@ body {
 
 .movie-poster {
     width: 100%;
-    height: 380px; /* Adjusted height to match proportions */
+    height: 380px; 
     background: #eee;
     position: relative;
     overflow: hidden;
@@ -355,16 +355,12 @@ body {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    background: #1f2937; /* Dark styling */
+    background: #1f2937; 
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
     font-weight: bold;
     font-size: 0.85rem;
-}
-
-.favorite-icon {
-    display: none; /* Icon not present in the new design screenshot for card view? Or hidden. User said 'exactly like photo'. Photo doesn't show hearts on posters clearly or they are very subtle. I will hide for now or keep top right? Screenshot doesn't show them. */
 }
 
 .movie-info {
@@ -449,7 +445,6 @@ body {
 }
 
 /* Footer */
-/* Footer */
 .footer {
     background: transparent;
     color: white;
@@ -514,15 +509,14 @@ body {
 }
 
 .footer-menu-col {
-    flex: 1; /* Takes up remaining space to push payment col to the right */
+    flex: 1; 
 }
 
 .footer-payment-col {
-    /* No flex: 1, so it takes only needed width */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns items to the left */
-    text-align: left;        /* Aligns text to the left */
+    align-items: flex-start; 
+    text-align: left;        
 }
 
 .footer-menu-col h3, .footer-payment-col h3 {
@@ -580,13 +574,12 @@ body {
     background: #FF5F00;
     right: 0;
     z-index: 2;
-    mix-blend-mode: hard-light; /* Attempt to simulate overlapping */
+    mix-blend-mode: hard-light; 
     opacity: 0.9;
 }
 
-/* Simple Visa Logo Text Style */
 .visa-logo {
-    color: #1a75e8; /* Visa Blue */
+    color: #1a75e8; 
     font-weight: 900;
     font-style: italic;
     font-size: 1.8rem;
@@ -620,7 +613,7 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #6c7e86; /* Greyish background from image */
+    background: #6c7e86; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -692,9 +685,9 @@ body {
 
     .nav-menu {
         width: 100%;
-        justify-content: space-between; /* or center */
+        justify-content: space-between; 
         gap: 10px;
-        overflow-x: auto; /* Allow scroll if too many items */
+        overflow-x: auto; 
         padding-bottom: 5px;
     }
     
@@ -796,19 +789,5 @@ body {
     .btn-login, .btn-review {
         width: 100%;
         text-align: center;
-    }
-
-    /* Grid */
-    .movies-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .movie-poster {
-        height: auto;
-        aspect-ratio: 2/3;
-    }
-
-    .hero-title {
-        font-size: 1.8rem;
     }
 }
